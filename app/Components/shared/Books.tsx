@@ -1,11 +1,8 @@
 import { iBook } from "@/app/Types/Book.type";
+import booksData from "@/public/booksData.json";
 import Book from "./Book";
 
-const getBooks = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/booksData.json`)
-    const data = await res.json()
-    return data;
-}
+const getBooks = () => booksData;
 const Books = async () => {
     const books = await getBooks()
     return (
