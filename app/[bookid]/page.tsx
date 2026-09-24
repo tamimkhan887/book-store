@@ -5,7 +5,7 @@ import { IoIosStar } from "react-icons/io";
 import ReadButton from "../Components/BookDetails/ReadButton";
 import WishListButton from "../Components/BookDetails/WishListButton";
 const getBooks = async () => {
-    const res = await fetch("http://localhost:3000/booksData.json")
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/booksData.json`)
     const data = await res.json()
     return data;
 }
